@@ -1,0 +1,335 @@
+object FormMain: TFormMain
+  Left = 272
+  Height = 662
+  Top = 116
+  Width = 653
+  Caption = 'Austeilen und Einsammeln'
+  ClientHeight = 662
+  ClientWidth = 653
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '2.0.12.0'
+  object GroupBox1: TGroupBox
+    Left = 0
+    Height = 662
+    Top = 0
+    Width = 208
+    Align = alLeft
+    Caption = 'Klassenliste'
+    ClientHeight = 642
+    ClientWidth = 204
+    ParentFont = False
+    TabOrder = 0
+    object Panel2: TPanel
+      Left = 0
+      Height = 642
+      Top = 0
+      Width = 186
+      Align = alLeft
+      Caption = 'Panel2'
+      ClientHeight = 642
+      ClientWidth = 186
+      ParentFont = False
+      TabOrder = 0
+      object ListBox1: TListBox
+        Left = 1
+        Height = 614
+        Top = 1
+        Width = 184
+        Align = alClient
+        ItemHeight = 0
+        OnClick = ListBox1Click
+        ParentFont = False
+        TabOrder = 0
+      end
+      object Panel3: TPanel
+        Left = 1
+        Height = 26
+        Top = 615
+        Width = 184
+        Align = alBottom
+        Alignment = taLeftJustify
+        Caption = 'Panel3'
+        ParentFont = False
+        TabOrder = 1
+      end
+    end
+  end
+  object PageControl1: TPageControl
+    Left = 213
+    Height = 662
+    Top = 0
+    Width = 440
+    ActivePage = TSAusteilen
+    Align = alClient
+    ParentFont = False
+    TabIndex = 0
+    TabOrder = 1
+    object TSAusteilen: TTabSheet
+      Caption = 'Austeilen'
+      ClientHeight = 634
+      ClientWidth = 432
+      ParentFont = False
+      object Label1: TLabel
+        Left = 24
+        Height = 15
+        Top = 16
+        Width = 83
+        Caption = 'Order /  Datei ...'
+        ParentColor = False
+        ParentFont = False
+      end
+      object ESource: TEdit
+        Left = 24
+        Height = 23
+        Top = 32
+        Width = 319
+        OnChange = ESourceChange
+        ParentFont = False
+        TabOrder = 0
+      end
+      object SBSelectFile: TSpeedButton
+        Left = 380
+        Height = 23
+        Hint = 'Datei...'
+        Top = 32
+        Width = 23
+        Caption = '...'
+        OnClick = SBSelectFileClick
+        ShowHint = True
+        ParentFont = False
+        ParentShowHint = False
+      end
+      object SBSelectFolder: TSpeedButton
+        Left = 352
+        Height = 23
+        Hint = 'Ordner...'
+        Top = 32
+        Width = 23
+        Caption = '...'
+        OnClick = SBSelectFolderClick
+        ShowHint = True
+        ParentFont = False
+        ParentShowHint = False
+      end
+      object BitBtn1: TBitBtn
+        Left = 25
+        Height = 30
+        Top = 376
+        Width = 379
+        Caption = 'Austeilen'
+        OnClick = BitBtn1Click
+        ParentFont = False
+        TabOrder = 1
+      end
+      object Label2: TLabel
+        Left = 25
+        Height = 15
+        Top = 616
+        Width = 34
+        Caption = 'Label2'
+        ParentColor = False
+        ParentFont = False
+      end
+      object GroupBox2: TGroupBox
+        Left = 24
+        Height = 264
+        Top = 104
+        Width = 380
+        Caption = 'Teilnehmer'
+        ClientHeight = 244
+        ClientWidth = 376
+        ParentFont = False
+        TabOrder = 2
+        object Panel4: TPanel
+          Left = 0
+          Height = 16
+          Top = 228
+          Width = 376
+          Align = alBottom
+          Alignment = taLeftJustify
+          ParentFont = False
+          TabOrder = 0
+        end
+        object ListBox2: TListBox
+          Left = 0
+          Height = 228
+          Top = 0
+          Width = 376
+          Align = alClient
+          ItemHeight = 0
+          ParentFont = False
+          TabOrder = 1
+        end
+      end
+      object Label3: TLabel
+        Left = 25
+        Height = 15
+        Top = 56
+        Width = 202
+        Caption = 'Ordner im Verzeichnis der Teilnehmer: '
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label4: TLabel
+        Left = 243
+        Height = 15
+        Top = 56
+        Width = 36
+        Caption = 'Label4'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label5: TLabel
+        Left = 25
+        Height = 15
+        Top = 72
+        Width = 158
+        Caption = 'Anzahl Dateien je Teilnehmer: '
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label6: TLabel
+        Left = 243
+        Height = 15
+        Top = 72
+        Width = 36
+        Caption = 'Label6'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object MemoAusteilen: TMemo
+        Left = 25
+        Height = 192
+        Top = 416
+        Width = 377
+        Lines.Strings = (
+          'MemoAusteilen'
+        )
+        ScrollBars = ssBoth
+        TabOrder = 3
+        WordWrap = False
+      end
+    end
+    object TSEinsammeln: TTabSheet
+      Caption = 'Einsammeln'
+      ClientHeight = 634
+      ClientWidth = 432
+      ParentFont = False
+      object BitBtn2: TBitBtn
+        Left = 24
+        Height = 30
+        Top = 376
+        Width = 379
+        Caption = 'Einsammeln'
+        OnClick = BitBtn2Click
+        ParentFont = False
+        TabOrder = 0
+      end
+      object GroupBox3: TGroupBox
+        Left = 24
+        Height = 264
+        Top = 104
+        Width = 377
+        Caption = 'Teilnehmer'
+        ClientHeight = 244
+        ClientWidth = 373
+        ParentFont = False
+        TabOrder = 1
+        object Panel5: TPanel
+          Left = 0
+          Height = 16
+          Top = 228
+          Width = 373
+          Align = alBottom
+          Alignment = taLeftJustify
+          ParentFont = False
+          TabOrder = 0
+        end
+        object ListBox3: TListBox
+          Left = 0
+          Height = 228
+          Top = 0
+          Width = 373
+          Align = alClient
+          ItemHeight = 0
+          ParentFont = False
+          TabOrder = 1
+        end
+      end
+      object Label7: TLabel
+        Left = 34
+        Height = 15
+        Top = 22
+        Width = 178
+        Caption = 'Zielverzeichnis beim Einsammeln:'
+        ParentColor = False
+      end
+      object Label8: TLabel
+        Left = 40
+        Height = 15
+        Top = 40
+        Width = 36
+        Caption = 'Label8'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label9: TLabel
+        Left = 35
+        Height = 15
+        Top = 64
+        Width = 61
+        Caption = 'Verzeichnis:'
+        ParentColor = False
+      end
+      object Label10: TLabel
+        Left = 112
+        Height = 15
+        Top = 64
+        Width = 43
+        Caption = 'Label10'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label11: TLabel
+        Left = 25
+        Height = 15
+        Top = 616
+        Width = 40
+        Caption = 'Label11'
+        ParentColor = False
+        ParentFont = False
+      end
+      object MemoEinsammeln: TMemo
+        Left = 25
+        Height = 197
+        Top = 416
+        Width = 378
+        Lines.Strings = (
+          'MemoEinsammeln'
+        )
+        ScrollBars = ssAutoBoth
+        TabOrder = 2
+        WordWrap = False
+      end
+    end
+  end
+  object Splitter1: TSplitter
+    Left = 208
+    Height = 662
+    Top = 0
+    Width = 5
+  end
+  object OpenDialog: TOpenDialog
+    Left = 384
+    Top = 536
+  end
+  object SelectDirectoryDialog: TSelectDirectoryDialog
+    Left = 528
+    Top = 536
+  end
+end
